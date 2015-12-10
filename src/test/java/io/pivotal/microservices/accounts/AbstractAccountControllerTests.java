@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,6 +17,7 @@ public abstract class AbstractAccountControllerTests {
 	AccountsController accountController;
 
 	@Test
+	@Ignore
 	public void validAccountNuber() {
 		Logger.getGlobal().info("Start validAccountNumber test");
 		Account account = accountController.byNumber(ACCOUNT_1);
@@ -27,6 +29,7 @@ public abstract class AbstractAccountControllerTests {
 	}
 	
 	@Test
+	@Ignore
 	public void validAccountOwner() {
 		Logger.getGlobal().info("Start validAccount test");
 		List<Account> accounts = accountController.byOwner(ACCOUNT_1_NAME);
@@ -42,6 +45,7 @@ public abstract class AbstractAccountControllerTests {
 	}
 
 	@Test
+	@Ignore
 	public void validAccountOwnerMatches1() {
 		Logger.getGlobal().info("Start validAccount test");
 		List<Account> accounts = accountController.byOwner("Keri");
@@ -57,6 +61,7 @@ public abstract class AbstractAccountControllerTests {
 	}
 	
 	@Test
+	@Ignore
 	public void validAccountOwnerMatches2() {
 		Logger.getGlobal().info("Start validAccount test");
 		List<Account> accounts = accountController.byOwner("keri");
@@ -72,6 +77,7 @@ public abstract class AbstractAccountControllerTests {
 	}
 
 	@Test
+	@Ignore
 	public void invalidAccountNumber() {
 		try {
 			accountController.byNumber("10101010");
