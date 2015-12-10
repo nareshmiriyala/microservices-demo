@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.Ignore;
 
 public class AccountsControllerTests extends AbstractAccountControllerTests {
 
@@ -13,6 +14,7 @@ public class AccountsControllerTests extends AbstractAccountControllerTests {
 	protected static class TestAccountRepository implements AccountRepository {
 
 		@Override
+		@Ignore
 		public Account findByNumber(String accountNumber) {
 			if (accountNumber.equals(ACCOUNT_1))
 				return theAccount;
